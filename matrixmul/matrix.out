@@ -1,0 +1,45 @@
+mic03.buaa.edu.cn
+mic02.buaa.edu.cn
+mic01.buaa.edu.cn
+matrix A = 
+1.000000	1.000000	1.000000	1.000000	1.000000	
+1.000000	2.000000	3.000000	4.000000	5.000000	
+1.000000	3.000000	5.000000	7.000000	9.000000	
+1.000000	4.000000	7.000000	10.000000	13.000000	
+1.000000	5.000000	9.000000	13.000000	17.000000	
+matrix B = 
+1.000000	1.000000	1.000000	1.000000	1.000000	
+1.000000	2.000000	3.000000	4.000000	5.000000	
+1.000000	3.000000	5.000000	7.000000	9.000000	
+1.000000	4.000000	7.000000	10.000000	13.000000	
+1.000000	5.000000	9.000000	13.000000	17.000000	
+envid 0 sent no.0 row
+envid 0 sent no.1 row
+envid 0 sent no.2 row
+envid 0 sent no.3 row
+envid 0 sent no.4 row
+env 1 get one new row
+env 4 get one new row
+env 5 get one new row
+env 2 get one new row
+env 3 get one new row
+Over env 1 return one row
+envid 1 killed
+Over env 4 return one row
+Over env 5 return one row
+Over env 2 return one row
+envid 2 killed
+
+matrix C = 
+5.000000	15.000000	25.000000	35.000000	45.000000	
+15.000000	55.000000	95.000000	135.000000	175.000000	
+25.000000	95.000000	165.000000	235.000000	305.000000	
+35.000000	135.000000	235.000000	335.000000	435.000000	
+45.000000	175.000000	305.000000	435.000000	565.000000	
+Over env 3 return one row
+envid 3 killed
+envid 4 killed
+envid 5 killed
+envid 6 killed
+envid 7 killed
+envid 8 killed

@@ -1,0 +1,17 @@
+#!/bin/bash
+#PBS -q mic                          //指定提交到的队列
+#PBS -N psrs_sort_yww                //指定作业名
+#PBS -l nodes=1:ppn=10              //指定作业申请的资源数
+#PBS -o psrs.out                     //指定作业的标准输出文件名
+#PBS -e psrs.err                     //指定作业的错误输出文件名
+
+cat $PBS_NODEFILE | uniq
+
+source /data/software/intel/impi/5.1.3.210/bin64/mpivars.sh
+
+nprocs=`cat ${PBS_NODEFILE}|wc -l`
+cd /data/home/15231036/psrs_sort
+
+export I_MPI_DAPL_PROVIDER=ofa-v2-mlx4_0-1
+/data/software/intel/compilers_and_libraries_2016.3.210/linux/mpi/intel64/bin/mpirun -hostfile $PBS_NODEFILE -np $nprocs ./psrs_sort
+
